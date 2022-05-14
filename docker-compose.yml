@@ -21,7 +21,7 @@ services:
     env_file: ./env.minio
     restart: always
   outline:
-    image: outlinewiki/outline:latest
+    image: warmherz/baenam-wiki:latest
     command: sh -c "yarn sequelize:migrate --env production-ssl-disabled && yarn start"
     environment:
       - DATABASE_URL=postgres://user:pass@postgres:5432/outline
